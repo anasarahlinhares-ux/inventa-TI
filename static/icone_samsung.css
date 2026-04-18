@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("fundo_dashboard.png");
+  background-size: 100%;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* TOPO */
+.topo {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.topo input {
+  width: 60%;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  background: #123845;
+  color: white;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  padding: 15px;
+  background: #00152cc7;
+}
+
+.menu label {
+  cursor: pointer;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  gap: 25px;
+  padding: 30px;
+}
+
+/* CARD */
+.card {
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img {
+  width: 70%;
+  height: 130px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card p {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* HOVER BONITO */
+.card:hover {
+  transform: scale(1.08);
+}

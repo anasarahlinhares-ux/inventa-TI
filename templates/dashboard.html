@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>InventaTI - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='teste_dashboard.css') }}">
+</head>
+<body>
+
+   <header class="topo">
+        <div class="logo-area">
+            <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+        </div>
+        <div class="busca-area">
+            <input type="text" placeholder="Pesquisar por patrimônio ou série...">
+        </div>
+    </header>
+
+    <div class="layout"
+         <aside class="menu-esquerdo">
+         </aside>
+         <main class="conteudo-scroll">
+         </main>
+         <aside class="menu-direito">
+         </aside> </div>
+
+    <div class="menu-esquerdo"> 
+    </div>
+
+    <nav class="nav-status">
+        <a href="#">Início</a>
+        <a href="#">Equipamentos</a>
+        <a href="#">Em uso</a>
+        <a href="#">Em manutenção</a>
+        <a href="#">Disponíveis</a>
+        <a href="#" class="destaque">Desativados</a>
+    </nav>
+
+    <div class="container-principal">
+        
+        <aside class="sidebar-esquerda">
+            <h3>Menu principal</h3>
+            <ul>
+                <li><a href="{{url_for('auth.equipamentos')}}">
+                    Total de equipamentos
+                </a>
+                <span>→</span>
+            </li>
+                <li><a href="{{url_for('auth.cadastro')}}">
+                    Cadastrar equipamentos
+                </a>
+                <span>→</span>
+            </li>
+                <li><a href="{{url_for('auth.lista')}}">
+                    Listar equipamentos
+                </a>
+                <span>→</span>
+            </li>
+                <li>Histórico de suporte <span>→</span></li>
+            </ul>
+        </aside>
+
+        <main class="conteudo-scroll">
+            
+            <section class="banner">
+                <div class="banner-texto">
+                    <h1>Bem vindo ao InventaTI</h1>
+                    <p>Melhores equipamentos de TI você encontra aqui.</p>
+                </div>
+            </section>
+
+            <section class="secao-icones">
+                <h3>Equipamentos</h3>
+                <div class="grid-atalhos">
+                <a href="{{ url_for('auth.notebook') }}">
+                    <div class="item-atalho">
+                        <div class="circulo-icone">💻</div>
+                        <p>Notebook</p>
+                    </div>
+                </a>
+                    <div class="item-atalho">
+                        <div class="circulo-icone">🖨️</div>
+                        <p>Impressora</p>
+                    </div>
+                    <div class="item-atalho">
+                        <div class="circulo-icone">📱</div>
+                        <p>tablet</p>
+                    </div>
+                    <div class="item-atalho">
+                        <div class="circulo-icone">🖥</div>
+                        <p>computador</p>
+                    </div>
+                    <div class="item-atalho">
+                        <div class="circulo-icone">📲</div>
+                        <p>smartphone</p>
+                    </div>
+                    <div class="item-atalho">
+                        <div class="circulo-icone">🌐</div>
+                        <p>softwares</p>
+                    </div>
+                    <div class="item-atalho">
+                        <div class="circulo-icone">🤖</div>
+                        <p>android</p>
+                    </div>
+                    <div class="item-atalho">
+                        <div class="circulo-icone">🍎</div>
+                        <p>iphone</p>
+                    </div>
+                    </div>
+            </section>
+
+            <section class="secao-icones">
+                <h3>Marcas</h3>
+                <div class="grid-atalhos">
+                <a href="{{ url_for('auth.samsung') }}"
+                    class="item-atalho">
+                    <div class="circulo-marca">S</div>
+                    <p>Samsung</p>
+                </a>
+                    <div class="item-atalho"><div class="circulo-marca">H</div><p>HP</p></div>
+                    <div class="item-atalho"><div class="circulo-marca">L</div><p>Lenovo</p></div>
+                    <div class="item-atalho"><div class="circulo-marca">A</div><p>Apple</p></div>
+                    <div class="item-atalho"><div class="circulo-marca">D</div><p>Dell</p></div>
+                    <div class="item-atalho"><div class="circulo-marca">P</div><p>Positivo</p></div>
+                    <div class="item-atalho"><div class="circulo-marca">A</div><p>Asus</p></div>
+                    <div class="item-atalho"><div class="circulo-marca">X</div><p></p>Xiaomi</div>
+                </div>
+                </div>
+            </section>
+            
+        </main>
+
+        <aside class="sidebar-direita">
+            <h3>Mais</h3>
+            <ul>
+                <li><span>←</span> Catálogos</li>
+                <li><span>←</span> Relatório de custos</li>
+                <li><span>←</span> Ajuda / Suporte</li>
+            </ul>
+        </aside> </div>
+</body>
+</html>

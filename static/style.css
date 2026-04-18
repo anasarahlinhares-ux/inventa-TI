@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url("/static/fundo.png");
+    height: 100vh;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    width: 50%;
+    padding: 80px;
+}
+
+.right {
+    width: 50%;
+    position: relative;
+}
+
+.titulo-topo {
+    color: #b04bff;
+    margin-bottom: 40px;
+    white-space: nowrap;
+    margin-top: 20px;
+    margin-left: 120px;
+}
+
+.card-login {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 450px;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+.card-login label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.card-login input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #b04bff;
+    background: transparent;
+    color: white;
+}
+
+.card-login input::placeholder {
+    color: #ccc;
+}
+
+.forgot {
+    display: block;
+    margin-top: 15px;
+    color: #b04bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #2c5364;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.secondary {
+    margin-top: 15px;
+    background: #1c3b47;
+}

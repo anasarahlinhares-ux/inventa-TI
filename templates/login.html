@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>InventaTI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="left">
+            <h1 class="titulo-topo">Acesse o controle de ciclo de vida dos ativos corporativos</h1>
+            </h1>
+
+            <div class="card-login">
+                <form action="{{ url_for('auth.process_login') }}"method="POST">
+                    
+                    <label>Usuário:</label>
+                    <input type="email" name="email" placeholder="Digite seu e-mail aqui" required>
+
+                    <label>Senha:</label>
+                    <input type="password" name="senha" placeholder="Digite sua senha aqui" required>
+
+                    <a href="#" class="forgot">Esqueceu a senha?</a>
+
+                    <button type="submit">Entrar</button>
+                    <button type="button" class="secondary">Solicitar acesso</button>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="right">
+            <!-- Aqui depois você coloca -->
+            <!-- <img src="{{ url_for('static', filename='logo.png') }}"> -->
+            <!-- <img src="{{ url_for('static', filename='fundo.png') }}"> -->
+        </div>
+
+    </div>
+
+</body>
+</html>

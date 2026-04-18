@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Equipamentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='lista_de_equipamentos.css') }}">
+</head>
+<body>
+
+<!-- TOPO -->
+<header class="topo">
+    <a href="/dashboard" class="voltar">←</a>
+
+    <div class="busca">
+        <input type="text" placeholder="Pesquisar por um equipamento específico...">
+    </div>
+</header>
+
+<!-- FILTROS -->
+<section class="filtros">
+    <button class="filtro ativo">Todos</button>
+    <button class="filtro">Em uso</button>
+    <button class="filtro">Disponíveis</button>
+    <button class="filtro">Manutenção</button>
+    <button class="filtro">Desativados</button>
+</section>
+
+<!-- AÇÕES -->
+<section class="acoes">
+    <span id="contador">0 selecionados</span>
+</section>
+
+<!-- LISTA -->
+<main class="lista">
+
+    <!-- ITEM -->
+    <div class="item">
+        <input type="checkbox">
+        <img src="{{ url_for('static', filename='notebook.png') }}">
+        <p>Notebook Lenovo 2025, 128GB RAM, 250GB memória interna...</p>
+    </div>
+
+    <div class="item">
+        <input type="checkbox">
+        <img src="{{ url_for('static', filename='iphone.png') }}">
+        <p>iPhone 15 Pro Max, 128GB RAM, 250GB memória interna...</p>
+    </div>
+
+    <div class="item">
+        <input type="checkbox">
+        <img src="{{ url_for('static', filename='tablet.png') }}">
+        <p>Tablet Samsung Galaxy 2024, 128GB RAM, 250GB memória...</p>
+    </div>
+
+    <div class="item">
+        <input type="checkbox">
+        <img src="{{ url_for('static', filename='ipad.png') }}">
+        <p>iPad Apple 2026, 128GB RAM, 250GB memória interna...</p>
+    </div>
+
+    <div class="item">
+        <input type="checkbox">
+        <img src="{{ url_for('static', filename='ipad.png') }}">
+        <p>Computador Dell 2024, 16GB RAM, 250GB memória interna...</p>
+    </div>
+
+    <div class="item">
+        <input type="checkbox">
+        <img src="{{ url_for('static', filename='ipad.png') }}">
+        <p>Smartphone Apple 2023, 8GB RAM, 250GB memória interna...</p>
+    </div>
+
+    <div class="item">
+        <input type="checkbox">
+        <img src="{{ url_for('static', filename='ipad.png') }}">
+        <p>notebook Asus 2023, 128GB RAM, 250GB memória interna...</p>
+    </div>
+
+    <div class="item">
+        <input type="checkbox">
+        <img src="{{ url_for('static', filename='ipad.png') }}">
+        <p>Netbook Dell 2025, 8GB RAM, 250GB memória interna...</p>
+    </div>
+
+    <div class="item">
+        <input type="checkbox">
+        <img src="{{ url_for('static', filename='ipad.png') }}">
+        <p>Macbook Apple 2026, 16GB RAM, 250GB memória interna...</p>
+    </div>
+
+    <div class="item">
+        <input type="checkbox">
+        <img src="{{ url_for('static', filename='ipad.png') }}">
+        <p>Tablet 2022, 8GB RAM, 250GB memória interna...</p>
+    </div>
+
+</main>
+
+<div class="container-principal">
+
+    <!-- LISTA -->
+    <div class="lista">
+        <!-- seus itens aqui -->
+    </div>
+
+    <!-- COLUNA DIREITA -->
+    <aside class="acoes-lateral">
+        <button>Colocar em uso</button>
+        <button>Colocar em manutenção</button>
+        <button>Colocar em disponiveis</button>
+        <button>Desativar</button>
+    </aside>
+
+</div>
+
+<script>
+    const checkboxes = document.querySelectorAll("input[type='checkbox']");
+    const contador = document.getElementById("contador");
+
+    checkboxes.forEach(cb => {
+        cb.addEventListener("change", () => {
+            const selecionados = document.querySelectorAll("input[type='checkbox']:checked").length;
+            contador.innerText = selecionados + " selecionados";
+        });
+    });
+</script>
+
+</body>
+</html>

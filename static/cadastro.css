@@ -1,0 +1,259 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f5f9;
+    background-image: url("fundo_dashboard.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'poppies', sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container principal */
+.container {
+    width: 450px;
+    margin: 0 auto;
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    align-items: center;
+    margin-top: 270px;
+}
+
+/* Header / Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(145deg, #0b3a3d, #124f4f);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 20, 30, 0.3);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #35cccc, #48c8d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #1f5e56;
+}
+
+/* Conteúdo principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0;
+    margin-top: 300px;
+    flex-direction: column;
+    min-height: 110vh;
+    gap: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Card de cadastro */
+.card-cadastro {
+    background: rgba(2, 10, 17, 0.65);
+    border-radius: 10px;
+    padding: 90px;
+    box-shadow: 0 15px 30px rgba(1, 139, 132, 0.86);
+    width: 1000px;
+    border: 1px solid #98f1e6;
+    gap: 10px;
+    height: 720px;
+    font-size: 14px;
+}
+
+.card-titulo {
+    font-size: 37px;
+    color: #01979c;
+    margin-bottom: 25px;
+    text-align: center;
+    padding-bottom: 05px;
+    font-weight: bold;
+}
+
+/* Formulário */
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.label {
+    font-weight: 600;
+    color: #016b8f;
+    font-size: 1.1rem;
+    min-width: 120px;
+    gap: 50px;
+}
+
+.input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #00111bb6;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #10263be7;
+    height: 42px;
+    width: 260px;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #011631b2;
+    box-shadow: 0 0 0 4px rgba(48, 142, 171, 0.1);
+    height: 40px;
+}
+
+.input::placeholder {
+    color: #365b6d;
+    font-style: italic;
+    height: 90px;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 07px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 240px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-salvar {
+    background: linear-gradient(145deg, #0b2b3d, #123d4f);
+    color: white;
+}
+
+.btn-cancelar {
+    background: #143b4e;
+    color: #e1f4fa;
+    border: 2px solid #1b465c;
+}
+
+.btn-cancelar:hover {
+    background: #d0e2ed;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #5f7e8c;
+    font-size: 0.9rem;
+    padding: 20px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .card-cadastro {
+        padding: 10px 05px;
+    }
+
+    .card-titulo {
+        font-size: 1.5rem;
+    }
+
+    .campo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .label {
+        min-width: auto;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

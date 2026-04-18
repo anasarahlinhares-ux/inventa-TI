@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("fundo_dashboard.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* TOPO */
+.topo {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    background: #060c1fb4;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.voltar {
+    font-size: 22px;
+    color: #00d9ff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.busca input {
+    width: 700px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background: #0c122ee1;
+    color: rgb(228, 229, 230);
+    margin-left: 340px;
+}
+
+.container-principal {
+    display: flex;
+}
+
+/* LISTA ocupa a maior parte */
+.lista {
+    width: 75%;
+}
+
+/* COLUNA DA DIREITA */
+.acoes-lateral {
+    width: 25%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* BOTÕES */
+.acoes-lateral button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #00d9ff;
+    color: black;
+    cursor: pointer;
+    transition: 0.0;
+}
+
+.acoes-lateral button:hover {
+    background: #00bcd4;
+}
+
+/* FILTROS */
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    padding: 15px;
+}
+
+.filtro {
+    background: transparent;
+    border: none;
+    color: #5934fd;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filtro.ativo {
+    border-bottom: 2px solid #00d9ff;
+}
+
+/* AÇÕES */
+.acoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.botoes-acoes button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: none;
+    background: #00d9ff;
+    color: black;
+    cursor: pointer;
+}
+
+/* LISTA */
+.lista {
+    padding: 20px 40px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.item:hover {
+    background: rgba(0, 217, 255, 0.1);
+}
+
+.item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+}
+
+.item input {
+    width: 18px;
+    height: 18px;
+}
+
+.item p {
+    margin: 0;
+}
+
+.acoes-lateral {
+    position: fixed;
+    right: 0;
+    top: 100px;
+
+    width: 250px;
+    height: calc(100vh - 100px);
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    background: rgba(0, 29, 41, 0.507);
+    backdrop-filter: blur(10px);
+
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.acoes-lateral button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #00060ead;
+    color: rgb(2, 145, 170);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.acoes-lateral button:hover {
+    background: #00bcd4;
+    transform: scale(1.05);
+}
+
+.lista {
+    margin-right: 270px;
+}

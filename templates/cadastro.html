@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de equipamentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cadastro.css') }}">
+</head>
+<body>
+
+        <!-- Conteúdo principal -->
+        <main class="main-content">
+            <h2 class="card-titulo">Cadastre aqui um equipamento!</h2>
+                <div class="card-cadastro">
+                
+                <form class="form-cadastro">
+                    <!-- Produto -->
+                    <div class="campo">
+                        <label for="produto" class="label">Produto:</label>
+                        <input type="text" id="produto" class="input" placeholder="Digite aqui...">
+                    </div>
+
+                    <!-- Marca -->
+                    <div class="campo">
+                        <label for="marca" class="label">Marca:</label>
+                        <input type="text" id="marca" class="input" placeholder="Digite aqui...">
+                    </div>
+
+                    <!-- Modelo -->
+                    <div class="campo">
+                        <label for="modelo" class="label">Modelo:</label>
+                        <input type="text" id="modelo" class="input" placeholder="Digite aqui...">
+                    </div>
+
+                    <!-- Tipo -->
+                    <div class="campo">
+                        <label for="tipo" class="label">Tipo:</label>
+                        <input type="text" id="tipo" class="input" placeholder="Digite aqui...">
+                    </div>
+
+                    <!-- Cor -->
+                    <div class="campo">
+                        <label for="cor" class="label">Cor:</label>
+                        <input type="text" id="cor" class="input" placeholder="Digite aqui...">
+                    </div>
+
+                    <!-- Lançamento -->
+                    <div class="campo">
+                        <label for="lancamento" class="label">Lançamento:</label>
+                        <input type="text" id="lancamento" class="input" placeholder="Digite aqui...">
+                    </div>
+
+                    <!-- Código -->
+                    <div class="campo">
+                        <label for="codigo" class="label">Código:</label>
+                        <input type="text" id="codigo" class="input" placeholder="Digite aqui...">
+                    </div>
+
+                    <!-- Empresa -->
+                    <div class="campo">
+                        <label for="empresa" class="label">Empresa:</label>
+                        <input type="text" id="empresa" class="input" placeholder="Digite aqui...">
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="botoes">
+                        <button type="submit" class="btn btn-salvar">Salvar</button>
+                        <button type="button" class="btn btn-cancelar">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Rodapé simples -->
+        <footer class="footer">
+            <p>InventaTI © 2026 - Melhores equipamentos de TI você encontra aqui.</p>
+        </footer>
+    </div>
+</body>
+</html>

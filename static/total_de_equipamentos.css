@@ -1,0 +1,77 @@
+body{
+margin:0;
+font-family:Arial;
+background-image:url("fundo_dashboard.png");
+background-size: 100%;
+background-attachment: fixed;
+color:white;
+}
+
+/* topo */
+
+.topo{
+display:flex;
+align-items:center;
+padding:20px;
+background:#00071bb2;
+}
+
+.voltar{
+font-size:24px;
+margin-right:20px;
+cursor:pointer;
+}
+
+.barra-pesquisa input{
+width:800px;
+padding:12px;
+border-radius:25px;
+border:none;
+background:#11294991;
+color:white;
+margin-left: 290px;
+}
+
+/* menu filtros */
+
+.menu-filtro{
+display:flex;
+justify-content:center;
+background:#000c22a6;
+padding:15px;
+color:hsl(263, 100%, 62%);
+font-weight:bold;
+gap: 150px;
+}
+
+/* conteúdo */
+
+.conteudo{
+padding:30px;
+}
+
+.lista-equipamentos{
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+/* item */
+
+.item{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.item img{
+width:70px;
+height:70px;
+object-fit:cover;
+border-radius:5px;
+}
+
+.item p{
+max-width:800px;
+}
