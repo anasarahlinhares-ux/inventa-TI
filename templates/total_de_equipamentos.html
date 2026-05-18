@@ -31,30 +31,17 @@
 
 <div class="lista-equipamentos">
 
-<div class="item">
-<img src="img/notebook1.jpg">
-<p>Notebook Lenovo 2025, 128GB RAM, 250GB memória interna, CPU, tamanho tradicional, prata...</p>
-</div>
-
-<div class="item">
-<img src="img/iphone.jpg">
-<p>iPhone 15 Pro Max, 128GB RAM, 250GB memória interna, CPU, tamanho tradicional, prata...</p>
-</div>
-
-<div class="item">
-<img src="img/notebook2.jpg">
-<p>Notebook Samsung 2025, 128GB RAM, 250GB memória interna, CPU, tamanho tradicional, prata...</p>
-</div>
-
-<div class="item">
-<img src="img/tablet.jpg">
-<p>Tablet Samsung Galaxy 2024, 128GB RAM, 250GB memória interna, CPU, tamanho tradicional, prata...</p>
-</div>
-
-<div class="item">
-<img src="img/ipad.jpg">
-<p>iPad Apple Galaxy Pro 2026, 128GB RAM, 250GB memória interna, CPU, tamanho tradicional, prata...</p>
-</div>
+{% for eq in equipamentos %}
+    <div class="item">
+        <h3>{{ eq.descriçao }}</h3>
+        <p>Marca: {{ eq.marca }}</p>
+        <p>Modelo: {{ eq.modelo }}</p>
+        <p>Tipo: {{ eq.tipo }}</p>
+        <p>Lançamento: {{ eq.lançamento }}</p>
+        <p>Codigo: {{ eq.codigo }}</p>
+        <p>Status: {{ eq.status }}</p>
+    </div>
+{% endfor %}
 
 </div>
 

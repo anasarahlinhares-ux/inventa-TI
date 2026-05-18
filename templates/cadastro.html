@@ -13,53 +13,53 @@
             <h2 class="card-titulo">Cadastre aqui um equipamento!</h2>
                 <div class="card-cadastro">
                 
-                <form class="form-cadastro">
+                <form class="form-cadastro" action="{{ url_for('auth.salvar_equipamento') }}" method="POST">
                     <!-- Produto -->
                     <div class="campo">
-                        <label for="produto" class="label">Produto:</label>
-                        <input type="text" id="produto" class="input" placeholder="Digite aqui...">
+                        <label for="descriçao" class="label">Descriçao:</label>
+                        <input type="text" id="descricao" name="descricao" class="input" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Marca -->
                     <div class="campo">
                         <label for="marca" class="label">Marca:</label>
-                        <input type="text" id="marca" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="marca" name="marca" class="input" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Modelo -->
                     <div class="campo">
                         <label for="modelo" class="label">Modelo:</label>
-                        <input type="text" id="modelo" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="modelo" name="modelo" class="input" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Tipo -->
                     <div class="campo">
                         <label for="tipo" class="label">Tipo:</label>
-                        <input type="text" id="tipo" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="tipo" name="tipo" class="input" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Cor -->
                     <div class="campo">
                         <label for="cor" class="label">Cor:</label>
-                        <input type="text" id="cor" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="cor" name="cor" class="input" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Lançamento -->
                     <div class="campo">
                         <label for="lancamento" class="label">Lançamento:</label>
-                        <input type="text" id="lancamento" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="lancamento" name="lancamento" class="input" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Código -->
                     <div class="campo">
                         <label for="codigo" class="label">Código:</label>
-                        <input type="text" id="codigo" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="codigo" name="codigo" class="input" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Empresa -->
                     <div class="campo">
-                        <label for="empresa" class="label">Empresa:</label>
-                        <input type="text" id="empresa" class="input" placeholder="Digite aqui...">
+                        <label for="empresa" class="label">Status:</label>
+                        <input type="text" id="status" name="status" class="input" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Botões -->

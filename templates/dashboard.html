@@ -41,7 +41,7 @@
         <aside class="sidebar-esquerda">
             <h3>Menu principal</h3>
             <ul>
-                <li><a href="{{url_for('auth.equipamentos')}}">
+                <li><a href="{{url_for('auth.total_equipamentos')}}">
                     Total de equipamentos
                 </a>
                 <span>→</span>
@@ -72,59 +72,99 @@
             <section class="secao-icones">
                 <h3>Equipamentos</h3>
                 <div class="grid-atalhos">
-                <a href="{{ url_for('auth.notebook') }}">
+                <a href="{{ url_for('auth.equipamento', nome = 'notebook') }}">
                     <div class="item-atalho">
                         <div class="circulo-icone">💻</div>
                         <p>Notebook</p>
                     </div>
-                </a>
+                <a href="{{url_for('auth.equipamento', nome = 'impressora') }}">
                     <div class="item-atalho">
                         <div class="circulo-icone">🖨️</div>
                         <p>Impressora</p>
                     </div>
+                </a>
+                <a href="{{url_for('auth.equipamento', nome = 'tablet') }}">
                     <div class="item-atalho">
                         <div class="circulo-icone">📱</div>
                         <p>tablet</p>
                     </div>
+                </a>
+                <a href="{{ url_for('auth.equipamento', nome = 'computador') }}">
                     <div class="item-atalho">
                         <div class="circulo-icone">🖥</div>
                         <p>computador</p>
                     </div>
+                </a>
+                <a href="{{ url_for('auth.equipamento', nome = 'smartphone') }}">
                     <div class="item-atalho">
                         <div class="circulo-icone">📲</div>
                         <p>smartphone</p>
                     </div>
+                </a>
+                <a href="{{ url_for('auth.equipamento', nome = 'softwares') }}">
                     <div class="item-atalho">
                         <div class="circulo-icone">🌐</div>
                         <p>softwares</p>
                     </div>
+                </a>
+                <a href="{{ url_for( 'auth.equipamento' , nome = 'android' ) }}">
                     <div class="item-atalho">
                         <div class="circulo-icone">🤖</div>
                         <p>android</p>
                     </div>
+                </a>
+                <a href="{{ url_for( 'auth.equipamento' , nome = 'iphone' ) }}">
                     <div class="item-atalho">
                         <div class="circulo-icone">🍎</div>
                         <p>iphone</p>
                     </div>
+                </a>
                     </div>
             </section>
 
             <section class="secao-icones">
                 <h3>Marcas</h3>
                 <div class="grid-atalhos">
-                <a href="{{ url_for('auth.samsung') }}"
-                    class="item-atalho">
+                <a href="{{ url_for('auth.marca', nome = 'Samsung' )}}">
+                    <div class="item-atalho"></div>
                     <div class="circulo-marca">S</div>
                     <p>Samsung</p>
                 </a>
-                    <div class="item-atalho"><div class="circulo-marca">H</div><p>HP</p></div>
-                    <div class="item-atalho"><div class="circulo-marca">L</div><p>Lenovo</p></div>
-                    <div class="item-atalho"><div class="circulo-marca">A</div><p>Apple</p></div>
-                    <div class="item-atalho"><div class="circulo-marca">D</div><p>Dell</p></div>
-                    <div class="item-atalho"><div class="circulo-marca">P</div><p>Positivo</p></div>
-                    <div class="item-atalho"><div class="circulo-marca">A</div><p>Asus</p></div>
-                    <div class="item-atalho"><div class="circulo-marca">X</div><p></p>Xiaomi</div>
-                </div>
+                <a href="{{ url_for( 'auth.marca' , nome = 'HP' )}}">
+                     <div class="item-atalho"></div>
+                        <div class="circulo-marca">H</div>
+                        <p>HP</p>
+                    </a>
+                <a href="{{ url_for( 'auth.marca' , nome = 'Lenovo' )}}">
+                     <div class="item-atalho"></div>
+                        <div class="circulo-marca">L</div>
+                        <p>Lenovo</p>
+                    </a>
+                <a href="{{ url_for( 'auth.marca' , nome =  'Apple' )}}">
+                     <div class="item-atalho"></div>
+                        <div class="circulo-marca">A</div>
+                        <p>Apple</p>
+                    </a>
+                <a href="{{ url_for( 'auth.marca' , nome = 'Dell' )}}">
+                     <div class="item-atalho"></div>
+                        <div class="circulo-marca">D</div>
+                        <p>Dell</p>
+                    </a>
+                <a href="{{ url_for( 'auth.marca' , nome = 'Positivo' )}}">
+                     <div class="item-atalho"></div>
+                        <div class="circulo-marca">P</div>
+                        <p>Positivo</p>
+                    </a>
+                <a href="{{ url_for( 'auth.marca' , nome = 'Asus' )}}">
+                     <div class="item-atalho"></div>
+                        <div class="circulo-marca">A</div>
+                        <p>Asus</p>
+                    </a>
+                <a href="{{ url_for( 'auth.marca' , nome = 'Xiaomi' )}}">
+                     <div class="item-atalho"></div>
+                        <div class="circulo-marca">X</div>
+                        <p>Xiaomi</p>
+                    </a>
                 </div>
             </section>
             
