@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-image: url("fundo_dashboard.png") ;
+    font-family:Arial, sans-serif;
+    background-position: center;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: arial, sans-serif ;
+}
+
+.container{
+    margin: center;
+    padding:30px;
+    display: grid;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#3868a8;
+}
+
+.barra-pesquisa{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.barra-pesquisa input{
+    width:900px;
+    max-width:100%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    background-color: rgba(29, 49, 92, 0.637);
+}
+
+.menu-filtro{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    margin-bottom:35px;
+    color: #d3dee4;
+}
+
+.menu-filtro button{
+    border:none;
+    background:rgba(18, 32, 80, 0.671);
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    transition:.3s;
+    color: rgb(174, 212, 245);
+}
+
+.menu-filtro button:hover{
+    transform:translateY(-2px);
+}
+
+.cards-container{
+    display:grid;
+    grid-template-columns:repeat(4, 2fr);
+    gap:30px;
+    align-items: stretch;
+    margin: auto;
+    max-width: 1000px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.card{
+    background:rgba(15, 28, 56, 0.589);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    text-align:center;
+    display: grid;
+    flex-wrap: wrap;
+    height: 190px;
+    width: 280px;
+}
+
+.icone{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#bac8f7;
+}
+
+.card p{
+    color:#aec9fa;
+    margin-bottom:8px;
+}
+
+.btn-reativar{
+    margin-top:15px;
+    width:50%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#608fccc5;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-reativar:hover{
+    background:#0b898d;
+}

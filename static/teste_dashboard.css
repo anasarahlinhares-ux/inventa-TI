@@ -21,7 +21,7 @@ body {
     margin: 0;
     height: 100%; 
     width: 100%; 
-    overflow: auto;
+    overflow: hidden;
     position: sticky;     
 }
 
@@ -183,20 +183,21 @@ main {
 .conteudo-scroll {
     flex: 1;
     min-width: 0;
-    overflow: auto; /* Aqui acontece a mágica do scroll */
+    overflow-y: auto; /* Aqui acontece a mágica do scroll */
     padding: 20px;
     background-size: cover;
     background-attachment: fixed;
     margin-right: 220px;
+    width: 80%;
 }
 
 /* Banner de Boas-Vindas */
 .banner {
     background: rgba(93, 63, 211, 0.2); /* Um roxo transparente */
     backdrop-filter: blur(10px);
-    padding: 40px;
+    padding: 45px;
     align-items: center;
-    height: 155px;
+    height: 170px;
     width: 100%;
     border-radius: 15px;
     margin-bottom: 30px;
@@ -208,10 +209,11 @@ main {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 20px;
-    padding-bottom: 10xp;
-    margin-top: 15px;
-    margin-bottom: 40px;
+    gap: 50px;
+    padding: 90px;
+    padding-bottom: -90px;
+    margin-top: -50px;
+    margin-bottom: -100px;
     color: white;
     text-decoration: none;
     align-items: center;
@@ -226,13 +228,14 @@ main {
 }
 
 .item-atalho:visited {
-    color: white;
+    color: rgb(252, 249, 249);
+    text-decoration: none;
 }
 
 .circulo-icone, .circulo-marca {
-    width: 70px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.1);
+    width: 80px;
+    height: 75px;
+    background: rgba(64, 65, 138, 0.212);
     border-radius: 15px;
     display: flex;
     align-items: center;

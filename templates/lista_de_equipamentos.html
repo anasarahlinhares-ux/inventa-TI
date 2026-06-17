@@ -22,7 +22,7 @@
     <button class="filtro">Em uso</button>
     <button class="filtro">Disponíveis</button>
     <button class="filtro">Manutenção</button>
-    <button class="filtro">Desativados</button>
+    <button class="filtro" onclick="window.location.href='{{ url_for('auth.desativados') }}' ">Desativados</button>
 </section>
 
 <!-- AÇÕES -->
@@ -33,66 +33,27 @@
 <!-- LISTA -->
 <main class="lista">
 
-    <!-- ITEM -->
-    <div class="item">
-        <input type="checkbox">
-        <img src="{{ url_for('static', filename='notebook.png') }}">
-        <p>Notebook Lenovo 2025, 128GB RAM, 250GB memória interna...</p>
-    </div>
+{% for eq in equipamentos %}
+<div class="item">
 
-    <div class="item">
-        <input type="checkbox">
-        <img src="{{ url_for('static', filename='iphone.png') }}">
-        <p>iPhone 15 Pro Max, 128GB RAM, 250GB memória interna...</p>
-    </div>
+    {{ eq.tipo }}
+    {{ eq.marca }}
+    {{ eq.modelo }} •
+    {{ eq.lancamento }}
+    {{ eq.codigo }}
+    {{ eq.status }}
 
-    <div class="item">
-        <input type="checkbox">
-        <img src="{{ url_for('static', filename='tablet.png') }}">
-        <p>Tablet Samsung Galaxy 2024, 128GB RAM, 250GB memória...</p>
-    </div>
+    <a href="{{ url_for('auth.editar_equipamento', id=eq.id) }}">
+        Editar
+    </a>
+    <a href="{{ url_for('auth.desativar', id=eq.id) }}">
+    Desativar
+    </a>
 
-    <div class="item">
-        <input type="checkbox">
-        <img src="{{ url_for('static', filename='ipad.png') }}">
-        <p>iPad Apple 2026, 128GB RAM, 250GB memória interna...</p>
-    </div>
+</div>
+{% endfor %}
 
-    <div class="item">
-        <input type="checkbox">
-        <img src="{{ url_for('static', filename='ipad.png') }}">
-        <p>Computador Dell 2024, 16GB RAM, 250GB memória interna...</p>
-    </div>
-
-    <div class="item">
-        <input type="checkbox">
-        <img src="{{ url_for('static', filename='ipad.png') }}">
-        <p>Smartphone Apple 2023, 8GB RAM, 250GB memória interna...</p>
-    </div>
-
-    <div class="item">
-        <input type="checkbox">
-        <img src="{{ url_for('static', filename='ipad.png') }}">
-        <p>notebook Asus 2023, 128GB RAM, 250GB memória interna...</p>
-    </div>
-
-    <div class="item">
-        <input type="checkbox">
-        <img src="{{ url_for('static', filename='ipad.png') }}">
-        <p>Netbook Dell 2025, 8GB RAM, 250GB memória interna...</p>
-    </div>
-
-    <div class="item">
-        <input type="checkbox">
-        <img src="{{ url_for('static', filename='ipad.png') }}">
-        <p>Macbook Apple 2026, 16GB RAM, 250GB memória interna...</p>
-    </div>
-
-    <div class="item">
-        <input type="checkbox">
-        <img src="{{ url_for('static', filename='ipad.png') }}">
-        <p>Tablet 2022, 8GB RAM, 250GB memória interna...</p>
-    </div>
+</form>
 
 </main>
 
@@ -102,14 +63,6 @@
     <div class="lista">
         <!-- seus itens aqui -->
     </div>
-
-    <!-- COLUNA DIREITA -->
-    <aside class="acoes-lateral">
-        <button>Colocar em uso</button>
-        <button>Colocar em manutenção</button>
-        <button>Colocar em disponiveis</button>
-        <button>Desativar</button>
-    </aside>
 
 </div>
 

@@ -22,62 +22,20 @@
   <span>Desativados</span>
 </nav>
 
-<!-- GRID DE EQUIPAMENTOS -->
-<main class="grid">
+<div class="lista"
+  
+{% for eq in equipamentos %}
+<div class="item">
 
-  <div class="card">
-    <img src="img/notebook1.jpg">
-    <p>Notebook Lenovo 2025, 128GB RAM, 250GB memória interna...</p>
-  </div>
+  <h3> 
+    {{ eq.tipo }} {{ eq.marca }} {{ eq.modelo }} • {{ eq.lancamento }} {{ eq.cor }} {{ eq.codigo }}
+  </h3>
 
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Notebook Apple, 128GB RAM, 250GB memória interna...</p>
-  </div>
+</div>
 
-  <div class="card">
-    <img src="img/notebook2.jpg">
-    <p>Notebook Samsung 2025, 128GB RAM...</p>
-  </div>
+{% endfor %}
 
-  <div class="card">
-    <img src="img/tablet.jpg">
-    <p>Notebook Asus 2024, 16gb RAM...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/ipad.jpg">
-    <p>Notebook Positivo 2026, 8gb RAM...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Notebook Dell 2024, 8GB RAM, 250GB memória interna...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Notebook Lenovo 2023, 8GB RAM, 250GB memória interna...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Notebook Xiaomi 2023, 128GB RAM, 250GB memória interna...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Notebook Positivo 2022, 4GB RAM, 250GB memória interna...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Notebook Sansung 2022, 4GB RAM, 250GB memória interna...</p>
-  </div>
-
-  <!-- duplica mais -->
-
-</main>
+</div>
 
 </body>
 </html>

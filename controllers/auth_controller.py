@@ -74,13 +74,74 @@ def dashboard():
 
 @auth_bp.route("/lista")
 def lista():
-    return render_template("lista_de_equipamentos.html")
+    equipamentos = Equipamento.query.filter(
+    Equipamento.status != "Desativado"
+).all()
+    return render_template("lista_de_equipamentos.html", equipamentos=equipamentos)
 
-@auth_bp.route("/equipamento/<nome>")
-def equipamento(nome):
-    return render_template("equipamento.html", nome=nome)
+@auth_bp.route("/editar/<int:id>")
+def editar_equipamento(id):
+    equipamento = Equipamento.query.get(id)
+    return render_template("cadastro.html", equipamento=equipamento)
 
-@auth_bp.route("/marca/<nome>")
-def marca(nome):
-    return render_template("marca.html", nome=nome)
+@auth_bp.route("/atualizar/<int:id>", methods=["POST"])
+def atualizar(id):
 
+    equipamento = Equipamento.query.get(id)
+
+    equipamento.descricao = request.form["descricao"]
+    equipamento.marca = request.form["marca"]
+    equipamento.modelo = request.form["modelo"]
+    equipamento.tipo = request.form["tipo"]
+    equipamento.cor = request.form["cor"]
+    equipamento.lancamento = request.form["lancamento"]
+    equipamento.codigo = request.form["codigo"]
+    equipamento.status = request.form["status"]
+
+    db.session.commit()
+
+    return redirect(url_for("auth.lista"))
+
+@auth_bp.route("/equipamento/<tipo>")
+def equipamentos_por_tipo(tipo):
+    equipamentos = Equipamento.query.filter_by(tipo=tipo).all()
+    return render_template("equipamento.html", equipamentos=equipamentos, tipo=tipo)
+
+@auth_bp.route("/marca/<marca>")
+def marca(marca):
+    equipamentos = Equipamento.query.filter_by(marca=marca).all()
+    return render_template("marca.html", equipamentos=equipamentos, marca=marca)
+
+@auth_bp.route("/desativados")
+def desativados():
+
+    equipamentos = Equipamento.query.filter_by(
+        status="Desativado"
+    ).all()
+
+    return render_template(
+        "desativados.html",
+        equipamentos=equipamentos
+    )
+
+@auth_bp.route("/desativar/<int:id>")
+def desativar(id):
+
+    equipamento = Equipamento.query.get(id)
+
+    if equipamento:
+        equipamento.status = "Desativado"
+        db.session.commit()
+
+    return redirect(url_for("auth.lista"))
+
+@auth_bp.route('/reativar/<int:id>')
+def reativar(id):
+
+    equipamento = Equipamento.query.get_or_404(id)
+
+    equipamento.status = 'Ativo'
+
+    db.session.commit()
+
+    return redirect(url_for('auth.desativados'))

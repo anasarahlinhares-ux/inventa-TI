@@ -12,61 +12,62 @@
         <main class="main-content">
             <h2 class="card-titulo">Cadastre aqui um equipamento!</h2>
                 <div class="card-cadastro">
+
+            {% set equipamento = equipamento|default(None) %}
                 
-                <form class="form-cadastro" action="{{ url_for('auth.salvar_equipamento') }}" method="POST">
+        <form class="form cadastro" action="{% if equipamento %} {{ url_for('auth.atualizar', id=equipamento.id) }} {% else %} {{ url_for('auth.salvar_equipamento') }} {% endif %}" method="POST">
+
                     <!-- Produto -->
                     <div class="campo">
                         <label for="descriçao" class="label">Descriçao:</label>
-                        <input type="text" id="descricao" name="descricao" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="descricao" name="descricao" class="input" value="{{ equipamento.descricao if equipamento else '' }}" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Marca -->
                     <div class="campo">
                         <label for="marca" class="label">Marca:</label>
-                        <input type="text" id="marca" name="marca" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="marca" name="marca" class="input" value="{{ equipamento.marca if equipamento else '' }}" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Modelo -->
                     <div class="campo">
                         <label for="modelo" class="label">Modelo:</label>
-                        <input type="text" id="modelo" name="modelo" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="modelo" name="modelo" class="input" value="{{ equipamento.modelo if equipamento else '' }}" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Tipo -->
                     <div class="campo">
                         <label for="tipo" class="label">Tipo:</label>
-                        <input type="text" id="tipo" name="tipo" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="tipo" name="tipo" class="input" value="{{ equipamento.tipo if equipamento else '' }}" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Cor -->
                     <div class="campo">
                         <label for="cor" class="label">Cor:</label>
-                        <input type="text" id="cor" name="cor" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="cor" name="cor" class="input" value="{{ equipamento.cor if equipamento else '' }}" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Lançamento -->
                     <div class="campo">
                         <label for="lancamento" class="label">Lançamento:</label>
-                        <input type="text" id="lancamento" name="lancamento" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="lancamento" name="lancamento" class="input" value="{{ equipamento.lancamento if equipamento else '' }}" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Código -->
                     <div class="campo">
                         <label for="codigo" class="label">Código:</label>
-                        <input type="text" id="codigo" name="codigo" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="codigo" name="codigo" class="input" value="{{ equipamento.codigo if equipamento else '' }}" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Empresa -->
                     <div class="campo">
                         <label for="empresa" class="label">Status:</label>
-                        <input type="text" id="status" name="status" class="input" placeholder="Digite aqui...">
+                        <input type="text" id="status" name="status" class="input" value="{{ equipamento.status if equipamento else '' }}" placeholder="Digite aqui...">
                     </div>
 
                     <!-- Botões -->
-                    <div class="botoes">
                         <button type="submit" class="btn btn-salvar">Salvar</button>
                         <button type="button" class="btn btn-cancelar">Cancelar</button>
-                    </div>
                 </form>
             </div>
         </main>

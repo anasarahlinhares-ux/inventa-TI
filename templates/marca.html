@@ -23,61 +23,20 @@
 </nav>
 
 <!-- GRID DE EQUIPAMENTOS -->
-<main class="grid">
+<div class="lista">
 
+  {% for eq in equipamentos %}
   <div class="card">
-    <img src="img/notebook1.jpg">
-    <p>Notebook Samsung 2025...</p>
+
+    <h3>
+      {{ eq.tipo }} {{ eq.marca }} {{ eq.modelo }} {{ eq.lancamento }} {{ eq.cor }} {{ eq.codigo }} {{ eq.status }}
+    </h3>
+  
   </div>
 
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Smartphone Samsung 2024...</p>
-  </div>
+  {% endfor %}
 
-  <div class="card">
-    <img src="img/notebook2.jpg">
-    <p>Computador Samsung 2025...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/tablet.jpg">
-    <p>Tablet Samsung Galaxy 2024...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/ipad.jpg">
-    <p>Notebook Samsung 2023...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Smartphone Samsung 2022...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Notebook Samsung 2022...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Tablet Samsung galaxy 2021...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Computador Samsung 2020...</p>
-  </div>
-
-  <div class="card">
-    <img src="img/iphone.jpg">
-    <p>Notebook Samsung 2020...</p>
-  </div>
-
-  <!-- duplica mais -->
-
-</main>
+</div>
 
 </body>
 </html>

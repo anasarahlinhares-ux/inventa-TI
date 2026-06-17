@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipamentos Desativados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='desativados.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Equipamentos Desativados</h1>
+
+    <div class="barra-pesquisa">
+        <input type="text" placeholder="Pesquisar equipamento...">
+    </div>
+
+    <div class="menu-filtro">
+        <button>Todos</button>
+        <button>Notebooks</button>
+        <button>Monitores</button>
+        <button>Impressoras</button>
+        <button>Outros</button>
+    </div>
+
+    <div class="cards-container">
+
+    {% for equipamento in equipamentos %}
+
+        <div class="card">
+
+    <h3>{{ equipamento.descricao }}</h3>
+
+    <p>Marca: {{ equipamento.marca }}</p>
+
+    <p>Modelo: {{ equipamento.modelo }}</p>
+
+    <p>Status: {{ equipamento.status }}</p>
+
+    <a href="{{ url_for('auth.reativar', id=equipamento.id) }}">
+        <button class="btn-reativar">
+            Reativar
+        </button>
+    </a>
+
+</div>
+
+   {% endfor %}
+
+</body>
+</html>

@@ -32,14 +32,11 @@
 <div class="lista-equipamentos">
 
 {% for eq in equipamentos %}
-    <div class="item">
-        <h3>{{ eq.descriçao }}</h3>
-        <p>Marca: {{ eq.marca }}</p>
-        <p>Modelo: {{ eq.modelo }}</p>
-        <p>Tipo: {{ eq.tipo }}</p>
-        <p>Lançamento: {{ eq.lançamento }}</p>
-        <p>Codigo: {{ eq.codigo }}</p>
-        <p>Status: {{ eq.status }}</p>
+<div class="item">
+    <h3>
+        {{ eq.tipo }} {{ eq.marca }} {{ eq.modelo }} {{ eq.cor }} • {{ eq.lancamento }} {{ eq.codigo }} {{ eq.status }} {{ eq.descriçao }}    
+    </h3>
+
     </div>
 {% endfor %}
 

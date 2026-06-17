@@ -36,12 +36,28 @@ body {
   cursor: pointer;
 }
 
+.lista{
+  display: flex;
+  margin-left: 40px;
+  padding: 1px;
+  margin-top: 40px;
+}
+
+.item{
+  display: flex;
+  margin-left: 40px;
+  padding: 1px;
+}
+
 /* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 2fr);
-  gap: 25px;
+  gap: 30px;
   padding: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
 }
 
 /* CARD */
@@ -49,6 +65,9 @@ body {
   text-align: center;
   transition: 0.3s;
   cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
 }
 
 .card img {
