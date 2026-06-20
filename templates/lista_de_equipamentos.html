@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Equipamentos</title>
+    <title>Gerenciar/Listar equipamentos</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='lista_de_equipamentos.css') }}">
 </head>
 <body>
@@ -25,11 +25,6 @@
     <button class="filtro" onclick="window.location.href='{{ url_for('auth.desativados') }}' ">Desativados</button>
 </section>
 
-<!-- AÇÕES -->
-<section class="acoes">
-    <span id="contador">0 selecionados</span>
-</section>
-
 <!-- LISTA -->
 <main class="lista">
 
@@ -40,13 +35,15 @@
     {{ eq.marca }}
     {{ eq.modelo }} •
     {{ eq.lancamento }}
-    {{ eq.codigo }}
+    {{ eq.cor }}
+    {{ eq.descricao }} |
+    {{ eq.codigo }} →
     {{ eq.status }}
 
-    <a href="{{ url_for('auth.editar_equipamento', id=eq.id) }}">
+    <a class="bnt-editar" href="{{ url_for('auth.editar_equipamento', id=eq.id) }}">
         Editar
     </a>
-    <a href="{{ url_for('auth.desativar', id=eq.id) }}">
+    <a class="bnt-desativar" href="{{ url_for('auth.desativar', id=eq.id) }}">
     Desativar
     </a>
 

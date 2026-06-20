@@ -217,6 +217,7 @@ main {
     color: white;
     text-decoration: none;
     align-items: center;
+    color: inherit;
 }
 
 .item-atalho {
@@ -243,6 +244,7 @@ main {
     font-size: 24px;
     margin-bottom: 8px;
     transition: 0.3s;
+    color: inherit;
 }
 
 .circulo-icone:hover {
@@ -270,4 +272,8 @@ a:active {
 .sidebar-esquerda a:active {
     color: rgb(184, 141, 252);
     text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
 }

@@ -1,13 +1,15 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Verdana, sans-serif;
     background: url("fundo_dashboard.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: white;
+    font-weight: bold;
 }
+
 
 /* TOPO */
 .topo {
@@ -47,6 +49,8 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    font-style: bold;
+    font-weight: 500;
 }
 
 /* COLUNA DA DIREITA */
@@ -117,17 +121,19 @@ body {
     flex-direction: column;
     display: flex;
     gap: 10px;
+    font-style: bold;
 }
 
 .item {
     display: flex;
     width: 100%;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 10px;
     transition: 0.3s;
+    font-style: bold;
 }
 
 .item:hover {
@@ -147,6 +153,7 @@ body {
 
 .item p {
     margin: 0;
+    font-weight: 500;
 }
 
 .acoes-lateral {
@@ -186,4 +193,20 @@ body {
 
 .lista {
     margin-right: 270px;
+    font-weight: 500px;
+}
+
+.bnt-editar{
+    text-decoration: none;
+    color:rgb(110, 80, 179);
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 8px;
+}
+
+.bnt-desativar{
+    text-decoration: none;
+    color: aqua;
+    font-weight: 100;
+    font-style: italic;
 }
